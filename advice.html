@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ... (your head section) -->
+    <title>Advice for Moderately Underweight</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    padding: 20px;
+    float: left;
+}
+.icon{
+    float: left;
+}
+
+.logo h1{
+    padding-left: 40px;
+    margin-top: 13px;
+}
+
+h2{
+    padding-left: 20px;
+}
+
+
+.items{
+    display: inline-flex;
+    gap: 60px;
+    justify-content: flex-end;
+    margin-left: 600px;
+    margin-top: 45px;
+    padding-left: 10px;
+}
+
+.items a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.items a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+         body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            text-align: center; /* Center align content */
+        }
+
+       #heading{
+        text-align: center;
+        margin-right: 190px;
+        margin-top: 40px;
+       }
+
+        p {
+            text-align: center;
+        }
+
+        button {
+            display: inline-block; /* Display buttons in the same line */
+            margin: 0 10px; /* Add some spacing between buttons */
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+        </style>
+</head>
+<header>
+    <div class="logo">
+        <i class="icon fa-brands fa-nutritionix fa-3x"></i>
+        <h1>NutriFit</h1>
+    </div>
+</header>
+<body>
+    <div class="items">
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./index.html">DietPlan</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contact.html">Contact us</a>
+    </div>
+    <h1 id="heading">Moderately Underweight</h1>
+    <p>Focus on a balanced diet to improve your health.</p>
+    <p>Are you interested in receiving advice on diet plans?</p>
+    <button id="yesButton">Yes</button>
+    <button id="noButton">No</button>
+
+    <script>
+        const yesButton = document.getElementById("yesButton");
+        const noButton = document.getElementById("noButton");
+
+        yesButton.addEventListener("click", function () {
+            // Redirect to collectInfo.html when "Yes" is clicked
+            window.location.href = "collectInfo.html";
+        });
+
+        noButton.addEventListener("click", function () {
+            // Redirect to a different page or perform any other action here.
+            alert("Thank you for visting our website🤗");
+        });
+    </script>
+</body>
+</html>

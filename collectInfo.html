@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Plan Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <style>
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    padding: 20px;
+    float: left;
+}
+.icon{
+    float: left;
+}
+
+h1{
+    padding-left: 40px;
+    margin-top: 13px;
+}
+
+h2{
+    padding-left: 20px;
+}
+
+
+.items{
+    display: inline-flex;
+    gap: 60px;
+    justify-content: flex-end;
+    margin-left: 600px;
+    margin-top: 45px;
+    padding-left: 10px;
+}
+
+.items a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.items a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+    
+    .container {
+        max-width: 400px;
+        margin-top: 25px;
+        margin-left: 450px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    </style>
+</head>
+<header>
+    <div class="logo">
+        <i class="icon fa-brands fa-nutritionix fa-3x"></i>
+        <h1>NutriFit</h1>
+    </div>
+</header>
+<body>
+    <div class="items">
+        <a href="./home.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./index.html">DietPlan</a>
+        <a href="./blog.html">Blog</a>
+        <a href="./contact.html">Contact us</a>
+    </div>
+    <div class="container">
+        <h1>Diet Plan Information</h1>
+        <form id="dietForm">
+            <label for="allergies">Allergies:</label>
+            <select id="allergies" name="allergies">
+                <option value="none">None</option>
+                <option value="nut">Nut Allergy</option>
+                <option value="dairy">Dairy Allergy</option>
+            </select><br><br>
+
+            <label for="dietaryPreference">Dietary Preference:</label>
+            <select id="dietaryPreference" name="dietaryPreference">
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non-vegetarian">Non-Vegetarian</option>
+            </select><br><br>
+
+            <label for="region">Region:</label>
+            <select id="region" name="region">
+                <option value="north">North</option>
+                <option value="south">South</option>
+            </select><br><br>
+
+            <button type="button" id="calculateButton">Generate Diet Plan</button><br><br>
+
+            <div id="result"></div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const calculateButton = document.getElementById("calculateButton");
+    calculateButton.addEventListener("click", generateDietPlan);
+});
+
+function generateDietPlan() {
+    const allergies = document.getElementById("allergies").value;
+    const dietaryPreference = document.getElementById("dietaryPreference").value;
+    const region = document.getElementById("region").value;
+
+    const resultElement = document.getElementById("result");
+
+    // Sample diet plan (customize this based on your recommendations)
+    let dietPlan = "Your personalized diet plan:\n";
+
+    // Consider allergies
+    if (allergies === "nut") {
+        dietPlan += "Avoid nuts in your diet.\n";
+    } else if (allergies === "dairy") {
+        dietPlan += "Avoid dairy products in your diet.\n";
+    }
+
+    // Consider dietary preference
+    if (dietaryPreference === "vegetarian") {
+        dietPlan += "Opt for vegetarian sources of protein and nutrients.\n";
+    } else if (dietaryPreference === "non-vegetarian") {
+        dietPlan += "Include lean meats and fish in your diet for protein.\n";
+    }
+
+    // Consider regional preference
+    if (region === "north") {
+        dietPlan += "Include more North Indian cuisine in your diet.\n";
+    } else if (region === "south") {
+        dietPlan += "Incorporate South Indian dishes for a balanced diet.\n";
+    }
+
+    resultElement.innerText = dietPlan;
+}
+
+    </script>
+</body>
+</html>

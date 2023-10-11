@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+    <style>
+      *{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo{
+    padding: 20px;
+    float: left;
+}
+.icon{
+    float: left;
+}
+
+h1{
+    padding-left: 40px;
+    margin-top: 13px;
+}
+
+.items{
+    display: inline-flex;
+    gap: 60px;
+    justify-content: flex-end;
+    margin-left: 600px;
+    margin-top: 45px;
+    padding-left: 10px;
+}
+
+.items a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.items a:hover{
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+}
+
+
+
+.food-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.food-container img {
+  width: 400px;
+  height: 400px;
+  display: inline;
+  margin: auto;
+  max-height: 300px;
+  object-fit: fill;
+  object-position: center;
+}
+
+.img-container {
+  margin: 0 1rem;
+  position: relative;
+}
+
+.img-content {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 2;
+  text-align: center;
+  transition: all 0.3s ease-in-out 0.1s;
+}
+
+.img-content h3 {
+  color: white;
+  font-size: 2.2rem;
+}
+
+.img-content a {
+  font-size: 1.2rem;
+}
+
+.img-container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.871);
+  opacity: 0;
+  z-index: 1;
+  transform: scaleY(0);
+  transform-origin: 100% 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.img-container:hover::after {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+.img-container:hover .img-content {
+  opacity: 1;
+  top: 40%;
+}  
+
+.btn {
+  display: inline;
+  padding: 5px 8px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+}
+
+.btn-primary {
+  color: black;
+  background: white;
+}
+
+.btn-primary:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  transition: background 0.3s ease-in-out;
+}
+    </style>
+</head>
+<header>
+  <div class="logo">
+      <i class="icon fa-brands fa-nutritionix fa-3x"></i>
+      <h1>NutriFit</h1>
+  </div>
+</header>
+<body>
+    <div class="items">
+      <a href="./home.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./index.html">DietPlan</a>
+      <a href="#">Blog</a>
+      <a href="./contact.html">Contact us</a>
+    </div>
+    <div id="food">
+        
+        <div class="food-container container">
+            <div class="food-type fruite">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/yxThVPXk/food1.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Fruits</h3>
+                        <a href="https://en.wikipedia.org/wiki/Fruit" class="btn btn-primary" target="blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type vegetable">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/Nffm6Rkk/food2.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Vegetables</h3>
+                        <a href="https://en.wikipedia.org/wiki/Vegetable" class="btn btn-primary" target="blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type grain">
+                <div class="img-container">
+                    <img src="https://i.postimg.cc/76ZwsPsd/food3.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Grains</h3>
+                        <a href="https://en.wikipedia.org/wiki/Grain" class="btn btn-primary" target="blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type nuts">
+                <div class="img-container">
+                    <img id="meat" src="./meat.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Meat Products</h3>
+                        <a href="https://en.wikipedia.org/wiki/Meat" class="btn btn-primary" target="blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type diaryProducts">
+                <div class="img-container">
+                    <img id="diary" src="./diary.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Dairy Products</h3>
+                        <a href="https://en.wikipedia.org/wiki/Dairy_product" class="btn btn-primary" target="blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="food-type nuts">
+                <div class="img-container">
+                    <img id="nuts" src="./nuts.jpg" alt="error" />
+                    <div class="img-content">
+                        <h3>Nuts</h3>
+                        <a href="https://en.wikipedia.org/wiki/Nut_(fruit)" class="btn btn-primary" target="blank">Learn
+                            More</a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+</body>
+</html>
