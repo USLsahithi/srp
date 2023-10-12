@@ -152,17 +152,16 @@ function generateDietPlan() {
 
     // Sample diet plan (customize this based on your recommendations)
     let dietPlan = "Your personalized diet plan:\n";
-
     // Consider allergies
     if (allergies === "nut") {
-        dietPlan += "Avoid nuts in your diet.\n";
+        dietPlan += "Breakfast: Idli or Dosa, Coconut Chutney, Sambar.\n";
     } else if (allergies === "dairy") {
         dietPlan += "Avoid dairy products in your diet.\n";
     }
 
     // Consider dietary preference
     if (dietaryPreference === "vegetarian") {
-        dietPlan += "Opt for vegetarian sources of protein and nutrients.\n";
+        dietPlan += "Mid-Morning Snack: Fruit Salad.\n Lunch: Lentil Soup (Rasam), Dal, Tomato Rice, Vegetable Rice, Curd.\n";
     } else if (dietaryPreference === "non-vegetarian") {
         dietPlan += "Include lean meats and fish in your diet for protein.\n";
     }
@@ -171,7 +170,7 @@ function generateDietPlan() {
     if (region === "north") {
         dietPlan += "Include more North Indian cuisine in your diet.\n";
     } else if (region === "south") {
-        dietPlan += "Incorporate South Indian dishes for a balanced diet.\n";
+        dietPlan += "Afternoon Snack: Masala Chai or Herbal Tea, Carrot and Cucumber Sticks.\n Dinner: Spinach and Potato Curry, Rice or Roti, Chickpea Curry (Chana Masala), Cabbage and Carrot Poriyal.\n Before Bed: Turmeric Milk.";
     }
 
     resultElement.innerText = dietPlan;
